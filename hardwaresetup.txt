@@ -1,0 +1,47 @@
+
+   ATMEL ATTINY85
+                   +-v-+
+   nc     PB5     1|   |8  Vcc --- +3.3V
+   CS <-- PB3     2|   |7  PB2 --> SCK
+   LEDSW <-> PB4  3|   |6  PB1 <-- MOSI    NOTE MOSI/MISO REVERSED
+   GND --- GND    4|   |5  PB0 --> MISO    WHEN USING THE USI VERSION
+                   +---+
+
+
+                 LEDSW--+
+                        |
+   +3.3V   R1     LED   |    R2    Switch
+   Vcc----\/\/\---[>|---+---\/\/\---[*]----GND
+           300               300
+
+
+   SD CARD
+   _______
+   [ 9 ]  \ rsv      nc
+     [ 1 ] |  CS <-- CS
+     [ 2 ] |  DI <-- MOSI
+     [ 3 ] | GND --- GND
+     [ 4 ] | Vcc --- +3.3V
+     [ 5 ] | CLK <-- SCK
+     [ 6 ] | GND --- GND
+     [ 7 ] |  DO --> MISO
+     [ 8 ] | rsv     nc
+   --------+
+
+   ADDITIONAL NOTES
+
+   You might need to change the fuses on the ATTINY85:
+   lfuse=E2,  hfuse=DF,  efuse=FF or 01
+
+   The lfuse controls the clock and startup time, 
+   mainly this must NOT be set for an external source so the pins can be used
+   The hfuse needs to enable SPI (0x20 bit == 0) and the reset (0x80 bit == 1)
+   to flash using ISP insted of high voltage (e.g. AVR Dragon).
+   The low bit of efuse if clear allows self-programming (trinket)
+
+   http://www.engbedded.com/fusecalc
+
+   Use the built-in card-detect switch on the SD card socket
+   to cut the power to the circuit when the card is removed.
+
+   Use a LM3940 to obtain 3.3V from a 5V source such as USB.

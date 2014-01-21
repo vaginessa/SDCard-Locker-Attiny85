@@ -1,7 +1,7 @@
 sdlocker-tiny
 =============
 
-tz1 version - use USI (4MHz SPI clock), refactor.
+tz1 version - use USI (4MHz SPI clock), refactor, Add INLINE CRC7 to avoid 256 byte table
 
 NOTE!  IMPORTANT!  MOSI and MISO are REVERSED for USI!!!!
 
