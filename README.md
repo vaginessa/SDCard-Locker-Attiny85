@@ -3,6 +3,7 @@ sdlocker-tiny
 
 tz1 version - use USI (4MHz SPI clock), refactor.
 
+NOTE!  IMPORTANT!  MOSI and MISO are REVERSED for USI!!!!
 
 **Attiny85**-based device to **enable** and **disable write-protection** on **any SD card**.
 [![sdlocker-tiny built inside the shell of an old PlayStation Memory Card](https://raw2.github.com/Nephiel/sdlocker-tiny/gh-pages/img/sdlocker-tiny-sm.jpg "sdlocker-tiny built inside the shell of an old PlayStation Memory Card")](https://raw2.github.com/Nephiel/sdlocker-tiny/gh-pages/img/sdlocker-tiny.jpg)  

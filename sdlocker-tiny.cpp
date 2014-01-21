@@ -7,8 +7,8 @@
                    +-v-+
    nc     PB5     1|   |8  Vcc --- +3.3V
    CS <-- PB3     2|   |7  PB2 --> SCK
-   LEDSW <-> PB4  3|   |6  PB1 <-- MISO
-   GND --- GND    4|   |5  PB0 --> MOSI
+   LEDSW <-> PB4  3|   |6  PB1 <-- M0SI
+   GND --- GND    4|   |5  PB0 --> MISO
 			   +---+
 
                  LEDSW--+
